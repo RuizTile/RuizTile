@@ -20,7 +20,7 @@ imported. Everything here is the initial contents to push.
 
 | Screen | Repo files |
 | --- | --- |
-| Home / Work / About / Contact | `index.html` (copy of `Ruiz Flooring.dc.html`) |
+| Home / Work / About / Contact | `index.html` (the site — edit directly) |
 | Photo library | `photos/` |
 | Runtime + design system | `support.js`, `_ds/` |
 | Deploy + open items | `README.md` |

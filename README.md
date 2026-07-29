@@ -17,8 +17,8 @@ Then **Settings → Pages → Deploy from a branch → main → / (root)**.
 Live at `https://ruiztile.github.io/RuizTile/` a minute later. Every later push
 to `main` republishes automatically.
 
-`index.html` is a copy of `Ruiz Flooring.dc.html` — the editable source. After
-any change to the source, the copy has to be remade or the published site is stale.
+`index.html` is the whole site and the file you edit — it renders in the browser
+via `support.js`, so there is no build step and no separate source to keep in sync.
 
 ## Photo library
 
