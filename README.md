@@ -50,7 +50,7 @@ always a room shot filed by what was visible in the background.
 
 - (505) 319-7653 · Eleazar7653@gmail.com
 - Albuquerque and surrounding area
-- Installing since 2013 · licensed and insured · free estimates · English/Español
+- Installing since 2013 · insured · free estimates · English/Español
 - No hours listed, no quote form — calls and email only, by request
 
 ## Open items
