@@ -147,6 +147,11 @@
     h3 { font-size: 20px !important; }
   }
 
+  @media (max-width: 760px) {
+    [data-viewtabs="1"] { gap: 10px 22px !important; }
+    [data-viewtabs="1"] button { font-size: 12px !important; white-space: normal !important; text-align: left; padding-bottom: 12px !important; }
+    [data-moreovl="1"] { height: 84px !important; font-size: 12px !important; padding-bottom: 12px !important; }
+  }
   @media (max-width: 400px) {
     [data-hero-h1] { font-size: 34px !important; }
     [data-gal] { gap: 10px !important; }
@@ -179,14 +184,14 @@
         </span>
       </a>
       <nav data-nav-links="1" style="display:flex;align-items:center;gap:6px;margin-left:auto;flex-wrap:wrap">
-        <a href="#" onClick="{{ goHome }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:999px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">Home</a>
-        <a href="#" onClick="{{ goWork }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:999px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">Work</a>
-        <a href="#" onClick="{{ goAbout }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:999px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">About</a>
-        <a href="#" onClick="{{ goContact }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:999px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">Contact</a>
+        <a href="#" onClick="{{ goHome }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:6px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">Home</a>
+        <a href="#" onClick="{{ goWork }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:6px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">Work</a>
+        <a href="#" onClick="{{ goAbout }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:6px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">About</a>
+        <a href="#" onClick="{{ goContact }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:6px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">Contact</a>
       </nav>
       <div data-hdr-actions="1" style="display:flex;align-items:center;gap:8px;flex:none">
         <button onClick="{{ toggleTheme }}" title="Switch light and dark" aria-label="Switch light and dark" style="margin-left:8px;width:38px;height:38px;border-radius:999px;cursor:pointer;background:transparent;border:1px solid var(--color-divider);color:var(--color-accent-2-700);font-size:15px;line-height:1;display:flex;align-items:center;justify-content:center" style-hover="border-color:var(--color-accent-2-700);background:color-mix(in srgb, var(--color-accent-2-700) 12%, transparent)">{{ themeIcon }}</button>
-        <a href="{{ telHref }}" data-hdr-call="1" class="btn btn-primary" style="border-radius:999px;font-size:15px;padding:11px 22px;white-space:nowrap">{{ phone }}</a>
+        <a href="{{ telHref }}" data-hdr-call="1" style="color:var(--color-accent-700);text-decoration:none;border-bottom:1px solid var(--color-accent-700);padding-bottom:2px;font-weight:700;font-size:15px;white-space:nowrap">{{ phone }}</a>
       </div>
     </div>
   </header>
@@ -203,8 +208,8 @@
         <h1 data-hero-h1="1" data-rise="1" style="font-size:82px;line-height:1.0;letter-spacing:0;margin:0 0 26px;max-width:13ch;animation-delay:0.08s">Tile, set right the first time.</h1>
         <p data-rise="1" style="font-size:20px;line-height:1.6;max-width:38ch;color:color-mix(in srgb, var(--color-text) 76%, transparent);margin:0 0 36px;animation-delay:0.16s">Tile and hardwood floors, showers, backsplashes, countertops, fireplaces and stairs — for Albuquerque homeowners, builders and property managers. Installing since 2013.</p>
         <div data-rise="1" style="display:flex;flex-wrap:wrap;gap:12px;animation-delay:0.24s">
-          <a href="{{ telHref }}" class="btn btn-primary" style="border-radius:999px;font-size:16px;padding:14px 28px">Call for a free estimate</a>
-          <a href="#" onClick="{{ goWork }}" class="btn btn-secondary" style="border-radius:999px;font-size:16px;padding:14px 28px">See the work</a>
+          <a href="{{ telHref }}" style="color:var(--color-accent-700);text-decoration:none;border-bottom:1px solid var(--color-accent-700);padding-bottom:2px;font-weight:700;font-size:17px">Call for a free estimate →</a>
+          <a href="#" onClick="{{ goWork }}" style="color:var(--color-text);text-decoration:none;border-bottom:1px solid var(--color-divider);padding-bottom:2px;font-size:17px;font-weight:700">See the work →</a>
           </div>
       </div>
       <div data-rise="1" data-heroimg="1" style="position:relative;z-index:1;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300);box-shadow:var(--shadow-lg);outline:1px solid var(--color-divider);outline-offset:-1px;animation-delay:0.12s">
@@ -219,7 +224,7 @@
           <h2 style="font-size:40px;line-height:1.08;margin:0 0 12px">Completed work</h2>
           <p style="font-size:17px;color:color-mix(in srgb, var(--color-text) 72%, transparent);margin:0">Tile and hardwood — floors, showers, backsplashes, countertops, fireplaces and stairs.</p>
         </div>
-        <a href="#" onClick="{{ goWork }}" class="btn btn-secondary" style="border-radius:999px;font-size:16px;padding:13px 26px;flex:none">All photos</a>
+        <a href="#" onClick="{{ goWork }}" style="color:var(--color-accent-700);text-decoration:none;border-bottom:1px solid var(--color-accent-700);padding-bottom:2px;font-weight:700;font-size:16px;flex:none">All photos →</a>
       </div>
       <div onMouseEnter="{{ pause }}" onMouseLeave="{{ resume }}" data-stage="1" style="position:relative;aspect-ratio:16/9;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300);border:1px solid var(--color-divider);box-shadow:var(--shadow-lg)">
         <sc-for list="{{ slides }}" as="p" hint-placeholder-count="8">
@@ -297,7 +302,7 @@
           <p style="font-size:19px;margin:0;color:color-mix(in srgb, #f9f4ed 80%, transparent);max-width:46ch">Call or text and we'll come look at the space. No charge, no obligation.</p>
         </div>
         <div style="display:flex;flex-direction:column;gap:12px">
-          <a href="#" onClick="{{ goContact }}" class="btn" style="border-radius:999px;font-size:17px;padding:15px 30px;background:var(--color-neutral-100);color:var(--color-accent-900);white-space:nowrap">Contact us</a>
+          <a href="#" onClick="{{ goContact }}" style="color:var(--color-neutral-100);text-decoration:none;border-bottom:1px solid var(--color-neutral-100);padding-bottom:2px;font-size:19px;font-weight:700;white-space:nowrap">Contact us</a>
         </div>
       </div>
     </section>
@@ -308,31 +313,38 @@
   <main>
     <section style="max-width:1240px;margin:0 auto;padding:clamp(48px,6vw,80px) clamp(20px,4vw,32px) 40px">
       <h1 data-page-h1="1" style="font-size:58px;line-height:1.04;margin:0 0 20px;max-width:16ch">Work</h1>
-      <p style="font-size:20px;max-width:48ch;color:color-mix(in srgb, var(--color-text) 76%, transparent);margin:0 0 34px">Finished installations and close-up detail — first by the material we set, then by the part of the house. Albuquerque and the surrounding area.</p>
+      <p style="font-size:20px;max-width:48ch;color:color-mix(in srgb, var(--color-text) 76%, transparent);margin:0 0 28px">Finished installations and close-up detail. Albuquerque and the surrounding area.</p>
+      <div data-viewtabs="1" style="display:flex;flex-wrap:wrap;gap:16px 36px;border-bottom:1px solid var(--color-divider);margin-bottom:28px">
+        <button onClick="{{ setViewSubstance }}" style="border:0;background:none;cursor:pointer;padding:0 0 14px;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;color:{{ substanceFg }};border-bottom:2px solid {{ substanceBorder }};margin-bottom:-1px">Tile &amp; wood</button>
+        <button onClick="{{ setViewRoom }}" style="border:0;background:none;cursor:pointer;padding:0 0 14px;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;color:{{ roomFg }};border-bottom:2px solid {{ roomBorder }};margin-bottom:-1px">Flooring, kitchen &amp; bath, exterior</button>
+      </div>
       <div style="display:flex;flex-wrap:wrap;gap:10px">
-        <a href="#plank" class="tag tag-outline" style="border-radius:999px;padding:9px 18px;font-size:15px;text-decoration:none;color:var(--color-text)">Wood-look plank</a>
-        <a href="#hardwood" class="tag tag-outline" style="border-radius:999px;padding:9px 18px;font-size:15px;text-decoration:none;color:var(--color-text)">Hardwood</a>
-        <a href="#showers" class="tag tag-outline" style="border-radius:999px;padding:9px 18px;font-size:15px;text-decoration:none;color:var(--color-text)">Showers &amp; tubs</a>
-        <a href="#porcelain" class="tag tag-outline" style="border-radius:999px;padding:9px 18px;font-size:15px;text-decoration:none;color:var(--color-text)">Porcelain floors</a>
-        <a href="#kitchens" class="tag tag-outline" style="border-radius:999px;padding:9px 18px;font-size:15px;text-decoration:none;color:var(--color-text)">Kitchens &amp; baths</a>
-        <a href="#patios" class="tag tag-outline" style="border-radius:999px;padding:9px 18px;font-size:15px;text-decoration:none;color:var(--color-text)">Patios &amp; entries</a>
-        <a href="#fireplaces" class="tag tag-outline" style="border-radius:999px;padding:9px 18px;font-size:15px;text-decoration:none;color:var(--color-text)">Fireplaces</a>
+        <sc-for list="{{ activeTags }}" as="t" hint-placeholder-count="5">
+          <a href="{{ t.href }}" style="text-decoration:none;color:var(--color-text);font-size:14px;letter-spacing:0.03em;padding-bottom:2px;border-bottom:1px solid var(--color-divider)">{{ t.name }}</a>
+        </sc-for>
       </div>
     </section>
 
-    <sc-for list="{{ sections }}" as="s" hint-placeholder-count="3">
+    <sc-for list="{{ activeGroups }}" as="s" hint-placeholder-count="3">
       <section id="{{ s.id }}" style="max-width:1240px;margin:0 auto;padding:52px clamp(20px,4vw,32px) 0;scroll-margin-top:96px">
-        <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 20px;padding-bottom:20px;margin-bottom:31px" data-rule="1">
+        <div onClick="{{ s.toggle }}" title="Show or hide this section" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 20px;padding-bottom:20px;margin-bottom:31px;cursor:pointer" data-rule="1">
+          <span style="font-size:20px;color:var(--color-accent-700);transform:rotate({{ s.chevron }}deg);transition:transform 0.2s ease;display:inline-block;width:1em">›</span>
           <h2 style="font-size:38px;line-height:1.06;margin:0">{{ s.name }}</h2>
           <p style="font-size:16px;color:color-mix(in srgb, var(--color-text) 66%, transparent);margin:0">{{ s.blurb }}</p>
+          <span style="font-size:14px;color:color-mix(in srgb, var(--color-text) 55%, transparent);margin-left:auto">{{ s.count }} photos</span>
         </div>
-        <div data-gal="1" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));grid-auto-rows:196px;grid-auto-flow:dense;gap:16px">
-          <sc-for list="{{ s.photos }}" as="p" hint-placeholder-count="8">
-            <div onClick="{{ p.open }}" title="Open photo" style="position:relative;border-radius:var(--radius-md);overflow:hidden;background:var(--color-neutral-300);cursor:zoom-in;grid-column:span {{ p.cs }};grid-row:span {{ p.rs }}" style-hover="box-shadow:var(--shadow-md)">
-              {{ p.image }}
-              <div style="position:absolute;inset:auto 8px 8px 8px;font-size:11px;font-family:ui-monospace,monospace;color:var(--color-neutral-700);word-break:break-all">{{ p.label }}</div>
-            </div>
-          </sc-for>
+        <div style="position:relative">
+          <div data-gal="1" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));grid-auto-rows:196px;grid-auto-flow:dense;gap:16px">
+            <sc-for list="{{ s.visiblePhotos }}" as="p" hint-placeholder-count="8">
+              <div onClick="{{ p.open }}" title="Open photo" style="position:relative;border-radius:var(--radius-md);overflow:hidden;background:var(--color-neutral-300);cursor:zoom-in;grid-column:span {{ p.cs }};grid-row:span {{ p.rs }}" style-hover="box-shadow:var(--shadow-md)">
+                {{ p.image }}
+                <div style="position:absolute;inset:auto 8px 8px 8px;font-size:11px;font-family:ui-monospace,monospace;color:var(--color-neutral-700);word-break:break-all">{{ p.label }}</div>
+              </div>
+            </sc-for>
+          </div>
+          <sc-if value="{{ s.hasMore }}" hint-placeholder-val="{{ false }}">
+            <div data-moreovl="1" onClick="{{ s.toggle }}" title="Show the rest of this section" style="position:absolute;inset:auto 0 0 0;height:110px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:18px;cursor:pointer;background:linear-gradient(to top, var(--color-bg), transparent);font-size:14px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;color:var(--color-accent-700);text-align:center">{{ s.moreLabel }}</div>
+          </sc-if>
         </div>
       </section>
     </sc-for>
@@ -340,7 +352,7 @@
     <section style="max-width:1240px;margin:0 auto;padding:88px clamp(20px,4vw,32px) 112px">
       <div style="background:var(--color-surface);border-radius:var(--radius-lg);border:1px solid var(--color-divider);padding:clamp(32px,4vw,56px) clamp(24px,4vw,64px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px">
         <h2 style="font-size:34px;line-height:1.08;margin:0;max-width:26ch">Something here close to what you have in mind?</h2>
-        <a href="#" onClick="{{ goContact }}" class="btn btn-primary" style="border-radius:999px;font-size:17px;padding:15px 30px;white-space:nowrap">Get an estimate</a>
+        <a href="#" onClick="{{ goContact }}" style="color:var(--color-accent-700);text-decoration:none;border-bottom:1px solid var(--color-accent-700);padding-bottom:2px;font-weight:700;font-size:17px;white-space:nowrap">Get an estimate →</a>
       </div>
     </section>
   </main>
@@ -362,7 +374,7 @@
     </section>
 
     <section style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,32px) 96px">
-      <h2 style="font-size:38px;line-height:1.08;margin:0 0 40px">How a job goes</h2>
+      <h2 style="font-size:38px;line-height:1.08;margin:0 0 40px">Process</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:32px">
         <div>
           <div style="width:56px;height:56px;border-radius:999px;background:var(--color-accent-200);color:var(--color-accent-800);display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:24px;margin-bottom:18px">1</div>
@@ -455,8 +467,8 @@
   </sc-if>
 
   <div data-callbar="1" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:40;gap:10px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:color-mix(in srgb, var(--color-bg) 94%, transparent);backdrop-filter:blur(12px);border-top:1px solid var(--color-divider)">
-    <a href="{{ telHref }}" class="btn btn-primary" style="flex:1 1 0;border-radius:999px;font-size:16px;padding:15px 18px;text-align:center;white-space:nowrap">Call {{ phone }}</a>
-    <a href="{{ mailHref }}" aria-label="Email us" class="btn btn-secondary" style="flex:none;border-radius:999px;font-size:18px;padding:15px 20px;line-height:1">✉</a>
+    <a href="{{ telHref }}" style="flex:1 1 0;text-align:center;white-space:nowrap;color:var(--color-accent-700);text-decoration:none;font-weight:700;font-size:16px;padding:15px 0;border-top:1px solid var(--color-divider)">Call {{ phone }}</a>
+    <a href="{{ mailHref }}" aria-label="Email us" style="flex:none;color:var(--color-text);text-decoration:none;font-size:18px;padding:15px 0;line-height:1;border-top:1px solid var(--color-divider)">✉</a>
   </div>
 
   <footer style="border-top:1px solid var(--color-divider);background:var(--color-surface)">
@@ -479,21 +491,62 @@
   </footer>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;phone&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;(505) 319-7653&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Eleazar7653@gmail.com&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;photosPerSection&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:20,&quot;min&quot;:4,&quot;max&quot;:40,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Gallery&quot;},&quot;showFilenames&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Gallery&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#c8102e&quot;,&quot;options&quot;:[&quot;#c8102e&quot;,&quot;#b06a1f&quot;,&quot;#1f6f5c&quot;,&quot;#3a4a63&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Look&quot;},&quot;galleryRhythm&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;editorial&quot;,&quot;options&quot;:[&quot;uniform&quot;,&quot;mixed&quot;,&quot;editorial&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Look&quot;},&quot;photoTone&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;natural&quot;,&quot;options&quot;:[&quot;natural&quot;,&quot;editorial&quot;,&quot;archival&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Look&quot;},&quot;slideSeconds&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:5,&quot;min&quot;:2,&quot;max&quot;:12,&quot;step&quot;:0.5,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Look&quot;},&quot;phone&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;(505) 319-7653&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Eleazar7653@gmail.com&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;photosPerSection&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:65,&quot;min&quot;:0,&quot;max&quot;:60,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Gallery&quot;},&quot;showFilenames&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Gallery&quot;}}">
 const SECTIONS = [
-  { id: "plank", name: "Wood-look plank", dir: "plank", n: 14, blurb: "Long-format plank tile and luxury vinyl plank, set with leveling clips." },
-  { id: "hardwood", name: "Hardwood", dir: "hardwood", n: 15, blurb: "Solid and engineered wood — acacia, white oak, stair landings and thresholds." },
-  { id: "showers", name: "Showers & tubs", dir: "showers", n: 44, blurb: "Waterproofed pans and walls, benches, niches and tub surrounds." },
-  { id: "porcelain", name: "Porcelain floors", dir: "porcelain", n: 13, blurb: "Large-format porcelain for new construction, baths and laundry rooms." },
-  { id: "kitchens", name: "Kitchens & baths", dir: "kitchens", n: 15, blurb: "Backsplashes, vanity tops and countertops — herringbone, hex and picket." },
-  { id: "patios", name: "Patios & entries", dir: "patios", n: 7, blurb: "Covered patios, paver walkways and outdoor living floors." },
-  { id: "fireplaces", name: "Fireplaces", dir: "fireplaces", n: 8, blurb: "Surrounds and full-height hearth walls in tile, stone and split-face travertine." }
+  { id: "plank", name: "Wood-look plank", dir: "plank", n: 21, skip: [16], blurb: "Long-format plank tile and luxury vinyl plank, set with leveling clips." },
+  { id: "hardwood", name: "Hardwood", dir: "hardwood", n: 24, skip: [6, 7], blurb: "Solid and engineered wood — acacia, white oak, stair landings and thresholds." },
+  { id: "showers", name: "Showers & tubs", dir: "showers", n: 62, skip: [7, 19], blurb: "Waterproofed pans and walls, benches, niches and tub surrounds." },
+  { id: "porcelain", name: "Porcelain floors", dir: "porcelain", n: 19, skip: [1], blurb: "Large-format porcelain for new construction, baths and laundry rooms." },
+  { id: "kitchens", name: "Kitchens & baths", dir: "kitchens", n: 22, blurb: "Backsplashes, vanity tops and countertops — herringbone, hex and picket." },
+  { id: "patios", name: "Patios & entries", dir: "patios", n: 8, skip: [3, 4, 7], blurb: "Covered patios, paver walkways and outdoor living floors." },
+  { id: "fireplaces", name: "Fireplaces", dir: "fireplaces", n: 10, skip: [2, 3, 4], blurb: "Surrounds and full-height hearth walls in tile, stone and split-face travertine." },
+  { id: "stairs", name: "Stairs", dir: "stairs", n: 2, blurb: "Treads, risers and landings in wood-look plank and hardwood." }
 ];
 
-const SPANS = [[2, 2], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [2, 1], [1, 1], [1, 1], [1, 2], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1]];
+const BY_DIR = {};
+SECTIONS.forEach(s => { BY_DIR[s.dir] = s; });
+
+// Two alternate groupings of the same photo library — substance (tile vs wood)
+// and room — built by combining whole folders, not per-photo tags.
+const SUBSTANCE_GROUPS = [
+  { id: "tile", name: "Tile", dirs: ["porcelain", "showers", "kitchens", "patios", "fireplaces"], blurb: "Porcelain, marble and natural stone — floors, walls and surrounds." },
+  { id: "wood", name: "Wood, hardwood & wood-look", dirs: ["hardwood", "plank", "stairs"], blurb: "Solid hardwood, engineered wood and wood-look plank tile." }
+];
+const ROOM_GROUPS = [
+  { id: "floors", name: "Flooring", dirs: ["plank", "hardwood", "porcelain", "stairs"], blurb: "Everyday floors — tile, hardwood and wood-look plank." },
+  { id: "kitchen-bath", name: "Kitchen & bath", dirs: ["kitchens", "showers"], blurb: "Backsplashes, countertops, showers and tub surrounds." },
+  { id: "exterior", name: "Exterior", dirs: ["patios"], blurb: "Covered patios, paver walkways and outdoor living floors." }
+];
+
+// Three rhythms for the gallery grid. "uniform" is a plain contact sheet;
+// "editorial" runs a big hero tile with tall and wide companions.
+const RHYTHMS = {
+  uniform: [[1, 1]],
+  mixed: [[2, 2], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [2, 1], [1, 1], [1, 1], [1, 2], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1]],
+  editorial: [[3, 2], [1, 2], [1, 1], [1, 1], [2, 1], [1, 1], [1, 2], [2, 2], [1, 1], [1, 1], [1, 1], [2, 1]]
+};
+
+// Each palette carries its own derived shades — a single hex can't produce a
+// readable link colour, a hover shade and a watermark tint on both grounds.
+const PALETTES = {
+  "#c8102e": { dark: "#e0233f", link: "#f4788d", linkL: "#b30d28", hover: "#a50d26", wm: "0,35,63", ring: "#e0233f" },
+  "#b06a1f": { dark: "#d9922f", link: "#efb96b", linkL: "#96591a", hover: "#8a5217", wm: "217,146,47", ring: "#d9922f" },
+  "#1f6f5c": { dark: "#2f9b80", link: "#7ecbb3", linkL: "#1a5c4d", hover: "#175040", wm: "47,155,128", ring: "#2f9b80" },
+  "#3a4a63": { dark: "#5b769c", link: "#9db4d4", linkL: "#33445c", hover: "#2b3a4d", wm: "91,118,156", ring: "#5b769c" }
+};
+
+const TONES = {
+  natural: { dark: "saturate(0.95) contrast(1.02) brightness(0.94)", light: "saturate(1) contrast(1) brightness(1)" },
+  editorial: { dark: "saturate(0.86) contrast(1.02) brightness(0.88)", light: "saturate(0.95) contrast(1.01) brightness(1)" },
+  archival: { dark: "saturate(0.42) contrast(1.08) brightness(0.86) sepia(0.12)", light: "saturate(0.5) contrast(1.05) brightness(1.01) sepia(0.1)" }
+};
 
 class Component extends DCLogic {
-  state = { page: "home", lb: null, slide: 0, paused: false, theme: "light" };
+  state = { page: "home", lb: null, slide: 0, paused: false, theme: "light", worksView: "substance", collapsed: {} };
+
+  toggleSection(id) {
+    return () => this.setState(s => ({ collapsed: { ...s.collapsed, [id]: !s.collapsed[id] } }));
+  }
 
   componentDidMount() {
     this._key = (e) => {
@@ -506,10 +559,11 @@ class Component extends DCLogic {
     try { saved = localStorage.getItem("ruiz-theme"); } catch (e) {}
     this.applyTheme(saved === "light" || saved === "dark" ? saved : "light");
     window.addEventListener("keydown", this._key);
+    this.applySkin();
     this._timer = setInterval(() => {
       if (this.state.paused || this.state.lb !== null || this.state.page !== "home") return;
       this.setState(s => ({ slide: (s.slide + 1) % 8 }));
-    }, 4500);
+    }, Math.max(1200, (this.props.slideSeconds ?? 4.5) * 1000));
   }
 
   componentWillUnmount() {
@@ -517,8 +571,24 @@ class Component extends DCLogic {
     clearInterval(this._timer);
   }
 
+  componentDidUpdate() { this.applySkin(); }
+
+  applySkin() {
+    const b = document.body, s = b.style;
+    const p = PALETTES[this.props.accentColor] || PALETTES["#c8102e"];
+    const light = this.state.theme === "light";
+    s.setProperty("--color-accent", light ? this.props.accentColor || "#c8102e" : p.dark);
+    s.setProperty("--color-accent-700", light ? p.linkL : p.link);
+    s.setProperty("--color-accent-600", p.hover);
+    s.setProperty("--wm", `rgba(${p.wm}, ${light ? 0.06 : 0.08})`);
+    s.setProperty("--glow", `rgba(${p.wm}, ${light ? 0.045 : 0.1})`);
+    const t = TONES[this.props.photoTone] || TONES.editorial;
+    s.setProperty("--wash", light ? t.light : t.dark);
+  }
+
   applyTheme(theme) {
     document.body.dataset.theme = theme;
+    requestAnimationFrame(() => this.applySkin());
     this.setState({ theme });
     try { localStorage.setItem("ruiz-theme", theme); } catch (e) {}
   }
@@ -573,9 +643,15 @@ class Component extends DCLogic {
     return e;
   }
 
-  photos(dir, n, all) {
+  // A section may have gaps: renumbering a folder is what corrupts it, so
+  // misfiled photos are removed and their numbers listed in skip instead.
+  photos(dir, n, all, skip) {
     const out = [];
-    for (let i = 1; i <= n; i++) out.push(this.entry(dir, i, all, SPANS[(i - 1) % SPANS.length]));
+    const r = RHYTHMS[this.props.galleryRhythm] || RHYTHMS.mixed;
+    for (let i = 1; i <= n; i++) {
+      if (skip && skip.indexOf(i) !== -1) continue;
+      out.push(this.entry(dir, i, all, r[out.length % r.length]));
+    }
     return out;
   }
 
@@ -584,10 +660,29 @@ class Component extends DCLogic {
     const email = this.props.email ?? "hello@ruizflooring.com";
     const all = [];
     const cap = this.props.photosPerSection ?? 0;
-    const sections = SECTIONS.map(m => ({ ...m, photos: this.photos(m.dir, cap ? Math.min(cap, m.n) : m.n, all) }));
+    const photosByDir = {};
+    SECTIONS.forEach(s => { photosByDir[s.dir] = this.photos(s.dir, cap ? Math.min(cap, s.n) : s.n, all, s.skip); });
+    const PREVIEW = 12;
+    const buildGroup = g => {
+      const photos = g.dirs.reduce((acc, d) => acc.concat(photosByDir[d] || []), []);
+      // Sections open by default; a shower-sized folder is the one exception —
+      // collapsed on first load so the page doesn't open on a huge scroll.
+      const open = g.id in this.state.collapsed ? !this.state.collapsed[g.id] : photos.length <= 20;
+      const hasMore = photos.length > PREVIEW;
+      return {
+        id: g.id, name: g.name, blurb: g.blurb, count: photos.length,
+        visiblePhotos: open ? photos : photos.slice(0, PREVIEW),
+        hasMore: hasMore && !open, chevron: open ? 90 : 0,
+        moreLabel: `+ ${photos.length - PREVIEW} more`,
+        toggle: this.toggleSection(g.id)
+      };
+    };
+    const isSubstance = this.state.worksView === "substance";
+    const activeGroups = (isSubstance ? SUBSTANCE_GROUPS : ROOM_GROUPS).map(buildGroup);
+    const activeTags = (isSubstance ? SUBSTANCE_GROUPS : ROOM_GROUPS).map(g => ({ href: "#" + g.id, name: g.name }));
     // The home strip re-uses gallery entries so the lightbox sequence has no duplicates.
-    const featured = sections.map(s => s.photos[0]).slice(0, 7);
-    featured.push(sections[0].photos[1]);
+    const featured = SECTIONS.map(s => (photosByDir[s.dir] || [])[0]).filter(Boolean).slice(0, 7);
+    featured.push((photosByDir[SECTIONS[0].dir] || [])[1]);
     const cursor = this.state.slide % 8;
     const slides = featured.map((p, i) => ({
       ...p,
@@ -615,8 +710,14 @@ class Component extends DCLogic {
       lbNext: (e) => { if (e) { e.preventDefault(); e.stopPropagation(); } this.step(1); },
       lbPrev: (e) => { if (e) { e.preventDefault(); e.stopPropagation(); } this.step(-1); },
       stop: (e) => e.stopPropagation(),
-      sections, featured, slides,
-      slideLabel: featured[cursor] ? SECTIONS.concat(SECTIONS)[cursor].name : "",
+      activeGroups, activeTags, featured, slides,
+      setViewSubstance: () => this.setState({ worksView: "substance" }),
+      setViewRoom: () => this.setState({ worksView: "room" }),
+      substanceFg: isSubstance ? "var(--color-accent-700)" : "color-mix(in srgb, var(--color-text) 55%, transparent)",
+      substanceBorder: isSubstance ? "var(--color-accent)" : "transparent",
+      roomFg: !isSubstance ? "var(--color-accent-700)" : "color-mix(in srgb, var(--color-text) 55%, transparent)",
+      roomBorder: !isSubstance ? "var(--color-accent)" : "transparent",
+      slideLabel: featured[cursor] ? SECTIONS[cursor % SECTIONS.length].name : "",
       slideCount: (cursor + 1) + " / 8",
       slideNext: (e) => { if (e) e.preventDefault(); this.slideStep(1); },
       slidePrev: (e) => { if (e) e.preventDefault(); this.slideStep(-1); },
