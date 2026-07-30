@@ -186,7 +186,6 @@
       <nav data-nav-links="1" style="display:flex;align-items:center;gap:6px;margin-left:auto;flex-wrap:wrap">
         <a href="#" onClick="{{ goHome }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:6px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">{{ tr.navHome }}</a>
         <a href="#" onClick="{{ goWork }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:6px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">{{ tr.navWork }}</a>
-        <a href="#" onClick="{{ goAbout }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:6px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">{{ tr.navAbout }}</a>
         <a href="#" onClick="{{ goContact }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:6px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">{{ tr.navContact }}</a>
       </nav>
       <div data-hdr-actions="1" style="display:flex;align-items:center;gap:8px;flex:none">
@@ -359,56 +358,6 @@
   </main>
   </sc-if>
 
-  <sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}">
-  <main>
-    <section style="max-width:1240px;margin:0 auto;padding:clamp(48px,6vw,80px) clamp(20px,4vw,32px) 72px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(36px,5vw,64px);align-items:start" data-two="1">
-      <div>
-        <h1 data-page-h1="1" style="font-size:58px;line-height:1.04;margin:0 0 26px;max-width:14ch">{{ tr.aboutH1 }}</h1>
-        <p data-dropcap="1" style="font-size:20px;line-height:1.6;margin:0 0 22px">{{ tr.aboutLead }}</p>
-        <p style="font-size:18px;line-height:1.6;color:color-mix(in srgb, var(--color-text) 78%, transparent);margin:0 0 18px">{{ tr.aboutP2 }}</p>
-        <p style="font-size:18px;line-height:1.6;color:color-mix(in srgb, var(--color-text) 78%, transparent);margin:0">{{ tr.aboutP3 }}</p>
-      </div>
-      <div style="position:relative;aspect-ratio:3/4;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300);box-shadow:var(--shadow-md)">
-        <img src="photos/featured/about.webp" alt="" onError="{{ hideBroken }}" decoding="async" class="washed" style="width:100%;height:100%;object-fit:cover">
-        <div style="position:absolute;inset:auto 0 0 0;padding:14px 18px;font-size:12px;font-family:ui-monospace,monospace;color:var(--color-neutral-700)">{{ aboutPhotoLabel }}</div>
-      </div>
-    </section>
-
-    <section style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,32px) 96px">
-      <h2 style="font-size:38px;line-height:1.08;margin:0 0 40px">{{ tr.processH2 }}</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:32px">
-        <div>
-          <div style="width:56px;height:56px;border-radius:999px;background:var(--color-accent-200);color:var(--color-accent-800);display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:24px;margin-bottom:18px">1</div>
-          <h3 style="font-size:22px;margin:0 0 10px">{{ tr.step1H3 }}</h3>
-          <p style="font-size:16px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 72%, transparent);margin:0">{{ tr.step1P }}</p>
-        </div>
-        <div>
-          <div style="width:56px;height:56px;border-radius:999px;background:var(--color-accent-200);color:var(--color-accent-800);display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:24px;margin-bottom:18px">2</div>
-          <h3 style="font-size:22px;margin:0 0 10px">{{ tr.step2H3 }}</h3>
-          <p style="font-size:16px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 72%, transparent);margin:0">{{ tr.step2P }}</p>
-        </div>
-        <div>
-          <div style="width:56px;height:56px;border-radius:999px;background:var(--color-accent-200);color:var(--color-accent-800);display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:24px;margin-bottom:18px">3</div>
-          <h3 style="font-size:22px;margin:0 0 10px">{{ tr.step3H3 }}</h3>
-          <p style="font-size:16px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 72%, transparent);margin:0">{{ tr.step3P }}</p>
-        </div>
-        <div>
-          <div style="width:56px;height:56px;border-radius:999px;background:var(--color-accent-200);color:var(--color-accent-800);display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:24px;margin-bottom:18px">4</div>
-          <h3 style="font-size:22px;margin:0 0 10px">{{ tr.step4H3 }}</h3>
-          <p style="font-size:16px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 72%, transparent);margin:0">{{ tr.step4P }}</p>
-        </div>
-      </div>
-    </section>
-
-    <section style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,32px) 112px">
-      <div style="background:var(--color-accent-2-200);border-radius:var(--radius-lg);border:1px solid var(--color-divider);padding:clamp(32px,4vw,56px) clamp(24px,4vw,64px)">
-        <h2 style="font-size:32px;line-height:1.08;margin:0 0 20px">{{ tr.whereH2 }}</h2>
-        <p style="font-size:18px;max-width:60ch;color:var(--color-accent-2-900);margin:0">{{ tr.whereP }}</p>
-      </div>
-    </section>
-  </main>
-  </sc-if>
-
   <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
   <main>
     <section style="max-width:1240px;margin:0 auto;padding:clamp(48px,6vw,80px) clamp(20px,4vw,32px) 112px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,72px);align-items:start" data-two="1">
@@ -425,20 +374,12 @@
             <div style="font-size:13px;letter-spacing:0.09em;text-transform:uppercase;color:color-mix(in srgb, var(--color-text) 55%, transparent);margin-bottom:8px">{{ tr.lblEmail }}</div>
             <a href="{{ mailHref }}" style="font-family:var(--font-body);font-weight:700;font-size:26px;line-height:1.2;text-decoration:none;color:var(--color-accent-700);word-break:break-all">{{ email }}</a>
           </div>
-          <div>
-            <div style="font-size:13px;letter-spacing:0.09em;text-transform:uppercase;color:color-mix(in srgb, var(--color-text) 55%, transparent);margin-bottom:8px">{{ tr.lblHours }}</div>
-            <div style="font-size:19px">{{ tr.hoursVal }}</div>
-          </div>
         </div>
       </div>
 
       <div style="background:var(--color-surface);border-radius:var(--radius-lg);border:1px solid var(--color-divider);padding:clamp(30px,4vw,48px) clamp(24px,4vw,44px)">
         <h2 style="font-size:28px;line-height:1.1;margin:0 0 24px">{{ tr.goodToKnow }}</h2>
         <div style="display:flex;flex-direction:column;gap:20px">
-          <div style="padding-bottom:20px;border-bottom:1px solid var(--color-divider)">
-            <div style="font-size:17px;font-weight:700;margin-bottom:5px">{{ tr.gtk1H }}</div>
-            <div style="font-size:16px;color:color-mix(in srgb, var(--color-text) 72%, transparent)">{{ tr.gtk1P }}</div>
-          </div>
           <div style="padding-bottom:20px;border-bottom:1px solid var(--color-divider)">
             <div style="font-size:17px;font-weight:700;margin-bottom:5px">{{ tr.gtk2H }}</div>
             <div style="font-size:16px;color:color-mix(in srgb, var(--color-text) 72%, transparent)">{{ tr.gtk2P }}</div>
@@ -544,7 +485,7 @@ const TONES = {
 
 const STRINGS = {
   en: {
-    navHome: "Home", navWork: "Work", navAbout: "About", navContact: "Contact",
+    navHome: "Home", navWork: "Work", navContact: "Contact",
     heroEyebrow: "Albuquerque, New Mexico",
     heroH1: "Tile, set right the first time.",
     heroP: "Tile and hardwood floors, showers, backsplashes, countertops, fireplaces and stairs — for Albuquerque homeowners, builders and property managers. Installing since 2013.",
@@ -558,41 +499,28 @@ const STRINGS = {
     svcPatios: "Patios & entries", svcCommercial: "Commercial floors", svcRepairs: "Repairs & re-grout",
     svcFireplace: "Fireplace surrounds", svcHardwood: "Hardwood floors", svcCountertops: "Countertops",
     svcStairs: "Stairs, treads & risers", svcWaterproof: "Waterproofing & prep",
-    stat1Sub: "Installing since", stat2Big: "Insured", stat2Sub: "documentation available",
-    stat3Big: "Free", stat3Sub: "written estimates", stat4Sub: "and English",
+    stat1Sub: "Installing since", stat2Big: "Insured", stat2Sub: "and bonded",
+    stat3Big: "Free", stat3Sub: "estimates", stat4Sub: "and English",
     ctaH2: "Get a free estimate",
-    ctaP: "Call or text and we'll come look at the space. No charge, no obligation.",
+    ctaP: "Call or text and we'll come look at the space.",
     ctaContact: "Contact us",
     workH1: "Work",
     workP: "Finished installations and close-up detail. Albuquerque and the surrounding area.",
     tabSubstance: "Tile & wood", tabRoom: "Flooring, kitchen & bath, exterior",
     photosWord: "photos", moreWord: "more",
     workCtaH2: "Something here close to what you have in mind?", workCtaLink: "Get an estimate →",
-    aboutH1: "About Ruiz Flooring",
-    aboutLead: "We install tile in Albuquerque homes and businesses, and have since 2013.",
-    aboutP2: "Most of our work is floors, showers and backsplashes for homeowners in the middle of a remodel, plus floors and entries for general contractors and property managers. We handle the whole tile scope: tear-out, substrate prep and waterproofing, layout, setting, grout and clean-up.",
-    aboutP3: "Insured. Estimates are free and in writing. We speak English and Spanish.",
-    processH2: "Process",
-    step1H3: "Walk-through", step1P: "We look at the space, measure, and talk through layout, material and schedule.",
-    step2H3: "Written estimate", step2P: "Line-item pricing for labor and materials, at no cost. No pressure to book.",
-    step3H3: "Prep", step3P: "Tear-out, leveling, backer board and waterproofing before a single tile goes down.",
-    step4H3: "Install", step4P: "Set, grout, seal, caulk and clean up. We walk the finished job with you.",
-    whereH2: "Where we work",
-    whereP: "Albuquerque and the surrounding area — Rio Rancho, Corrales, Bernalillo, Los Lunas, Belen, Placitas and the East Mountains. Ask about anything further out.",
     contactH1: "Contact",
     contactP: "Call or text for a free estimate. Albuquerque and the surrounding area.",
-    lblPhone: "Phone", lblEmail: "Email", lblHours: "Hours",
-    hoursVal: "Monday–Friday, 7am–5pm. Saturday by appointment.",
+    lblPhone: "Phone", lblEmail: "Email",
     goodToKnow: "Good to know",
-    gtk1H: "Free written estimates", gtk1P: "Labor and materials broken out, no charge for the visit.",
-    gtk2H: "Insured", gtk2P: "Documentation available on request for GCs and property managers.",
+    gtk2H: "Insured and bonded", gtk2P: "Documentation available on request for GCs and property managers.",
     gtk3H: "English and Español", gtk3P: "Hablamos español — llámenos con confianza.",
     gtk4H: "Service area", gtk4P: "Albuquerque, Rio Rancho, Corrales, Los Lunas and the East Mountains.",
     callWord: "Call",
-    footerTagline: "Tile installation in Albuquerque, NM. Insured."
+    footerTagline: "Tile installation in Albuquerque, NM. Insured and bonded."
   },
   es: {
-    navHome: "Inicio", navWork: "Trabajos", navAbout: "Nosotros", navContact: "Contacto",
+    navHome: "Inicio", navWork: "Trabajos", navContact: "Contacto",
     heroEyebrow: "Albuquerque, Nuevo México",
     heroH1: "Azulejo, bien puesto desde la primera vez.",
     heroP: "Pisos de azulejo y madera, regaderas, salpicaderos, cubiertas, chimeneas y escaleras — para propietarios, constructores y administradores de propiedades en Albuquerque. Instalando desde 2013.",
@@ -606,38 +534,25 @@ const STRINGS = {
     svcPatios: "Patios y entradas", svcCommercial: "Pisos comerciales", svcRepairs: "Reparaciones y rejunteo",
     svcFireplace: "Contornos de chimenea", svcHardwood: "Pisos de madera", svcCountertops: "Cubiertas",
     svcStairs: "Escaleras, huellas y contrahuellas", svcWaterproof: "Impermeabilización y preparación",
-    stat1Sub: "Instalando desde", stat2Big: "Asegurados", stat2Sub: "documentación disponible",
-    stat3Big: "Gratis", stat3Sub: "presupuestos por escrito", stat4Sub: "e inglés",
+    stat1Sub: "Instalando desde", stat2Big: "Asegurados", stat2Sub: "y afianzados",
+    stat3Big: "Gratis", stat3Sub: "presupuestos", stat4Sub: "e inglés",
     ctaH2: "Obtenga un presupuesto gratis",
-    ctaP: "Llame o mande mensaje y vamos a ver el espacio. Sin costo, sin compromiso.",
+    ctaP: "Llame o mande mensaje y vamos a ver el espacio.",
     ctaContact: "Contáctenos",
     workH1: "Trabajos",
     workP: "Instalaciones terminadas y detalles de cerca. Albuquerque y sus alrededores.",
     tabSubstance: "Azulejo y madera", tabRoom: "Pisos, cocina y baño, exterior",
     photosWord: "fotos", moreWord: "más",
     workCtaH2: "¿Hay algo aquí parecido a lo que tiene en mente?", workCtaLink: "Pida un presupuesto →",
-    aboutH1: "Sobre Ruiz Flooring",
-    aboutLead: "Instalamos azulejo en casas y negocios de Albuquerque desde 2013.",
-    aboutP2: "La mayor parte de nuestro trabajo son pisos, regaderas y salpicaderos para propietarios en plena remodelación, además de pisos y entradas para contratistas generales y administradores de propiedades. Nos encargamos de todo el proceso del azulejo: demolición, preparación de la base e impermeabilización, trazo, colocación, lechada y limpieza.",
-    aboutP3: "Asegurados. Los presupuestos son gratis y por escrito. Hablamos inglés y español.",
-    processH2: "Proceso",
-    step1H3: "Recorrido", step1P: "Vemos el espacio, medimos y platicamos el trazo, el material y el calendario.",
-    step2H3: "Presupuesto por escrito", step2P: "Precios detallados de mano de obra y materiales, sin costo. Sin presión para contratar.",
-    step3H3: "Preparación", step3P: "Demolición, nivelación, panel de respaldo e impermeabilización antes de colocar un solo azulejo.",
-    step4H3: "Instalación", step4P: "Colocamos, lechamos, sellamos, aplicamos silicón y limpiamos. Recorremos el trabajo terminado con usted.",
-    whereH2: "Dónde trabajamos",
-    whereP: "Albuquerque y sus alrededores — Rio Rancho, Corrales, Bernalillo, Los Lunas, Belén, Placitas y las East Mountains. Pregunte por lugares más lejanos.",
     contactH1: "Contacto",
     contactP: "Llame o mande mensaje para un presupuesto gratis. Albuquerque y sus alrededores.",
-    lblPhone: "Teléfono", lblEmail: "Correo", lblHours: "Horario",
-    hoursVal: "Lunes a viernes, 7am–5pm. Sábado con cita.",
+    lblPhone: "Teléfono", lblEmail: "Correo",
     goodToKnow: "Bueno saber",
-    gtk1H: "Presupuestos gratis por escrito", gtk1P: "Mano de obra y materiales detallados, sin costo por la visita.",
-    gtk2H: "Asegurados", gtk2P: "Documentación disponible a solicitud para contratistas y administradores.",
+    gtk2H: "Asegurados y afianzados", gtk2P: "Documentación disponible a solicitud para contratistas y administradores.",
     gtk3H: "Inglés y español", gtk3P: "Hablamos español — llámenos con confianza.",
     gtk4H: "Área de servicio", gtk4P: "Albuquerque, Rio Rancho, Corrales, Los Lunas y las East Mountains.",
     callWord: "Llamar",
-    footerTagline: "Instalación de azulejo en Albuquerque, NM. Asegurados.",
+    footerTagline: "Instalación de azulejo en Albuquerque, NM. Asegurados y afianzados.",
     groups: {
       tile: { name: "Azulejo", blurb: "Porcelana, mármol y piedra natural — pisos, paredes y contornos." },
       wood: { name: "Madera", blurb: "Madera sólida, madera de ingeniería y azulejo tipo madera." },
@@ -853,11 +768,9 @@ class Component extends DCLogic {
       mailHref: "mailto:" + email,
       isHome: this.state.page === "home",
       isWork: this.state.page === "work",
-      isAbout: this.state.page === "about",
       isContact: this.state.page === "contact",
       goHome: this.go("home"),
       goWork: this.go("work"),
-      goAbout: this.go("about"),
       goContact: this.go("contact"),
       hideBroken: (e) => { e.target.style.visibility = "hidden"; },
       themeIcon: this.state.theme === "light" ? "☾" : "☀",
