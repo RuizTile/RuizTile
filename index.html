@@ -184,12 +184,13 @@
         </span>
       </a>
       <nav data-nav-links="1" style="display:flex;align-items:center;gap:6px;margin-left:auto;flex-wrap:wrap">
-        <a href="#" onClick="{{ goHome }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:6px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">Home</a>
-        <a href="#" onClick="{{ goWork }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:6px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">Work</a>
-        <a href="#" onClick="{{ goAbout }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:6px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">About</a>
-        <a href="#" onClick="{{ goContact }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:6px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">Contact</a>
+        <a href="#" onClick="{{ goHome }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:6px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">{{ tr.navHome }}</a>
+        <a href="#" onClick="{{ goWork }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:6px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">{{ tr.navWork }}</a>
+        <a href="#" onClick="{{ goAbout }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:6px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">{{ tr.navAbout }}</a>
+        <a href="#" onClick="{{ goContact }}" data-nav-item="1" style="text-decoration:none;font-size:15px;color:var(--color-text);padding:8px 14px;border-radius:6px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">{{ tr.navContact }}</a>
       </nav>
       <div data-hdr-actions="1" style="display:flex;align-items:center;gap:8px;flex:none">
+        <button onClick="{{ toggleLang }}" title="English / Español" aria-label="Switch language" style="min-width:38px;height:38px;padding:0 12px;border-radius:999px;cursor:pointer;background:transparent;border:1px solid var(--color-divider);color:var(--color-accent-2-700);font-size:12px;font-weight:700;letter-spacing:0.06em;line-height:1;display:flex;align-items:center;justify-content:center" style-hover="border-color:var(--color-accent-2-700);background:color-mix(in srgb, var(--color-accent-2-700) 12%, transparent)">{{ langLabel }}</button>
         <button onClick="{{ toggleTheme }}" title="Switch light and dark" aria-label="Switch light and dark" style="margin-left:8px;width:38px;height:38px;border-radius:999px;cursor:pointer;background:transparent;border:1px solid var(--color-divider);color:var(--color-accent-2-700);font-size:15px;line-height:1;display:flex;align-items:center;justify-content:center" style-hover="border-color:var(--color-accent-2-700);background:color-mix(in srgb, var(--color-accent-2-700) 12%, transparent)">{{ themeIcon }}</button>
         <a href="{{ telHref }}" data-hdr-call="1" style="color:var(--color-accent-700);text-decoration:none;border-bottom:1px solid var(--color-accent-700);padding-bottom:2px;font-weight:700;font-size:15px;white-space:nowrap">{{ phone }}</a>
       </div>
@@ -203,13 +204,13 @@
       <div style="position:relative;z-index:1">
         <div data-rise="1" style="display:inline-flex;align-items:center;gap:14px;font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:26px">
           <span style="display:block;width:36px;height:1px;background:var(--color-accent-700)"></span>
-          <span style="white-space:nowrap">Albuquerque, New Mexico</span>
+          <span style="white-space:nowrap">{{ tr.heroEyebrow }}</span>
         </div>
-        <h1 data-hero-h1="1" data-rise="1" style="font-size:82px;line-height:1.0;letter-spacing:0;margin:0 0 26px;max-width:13ch;animation-delay:0.08s">Tile, set right the first time.</h1>
-        <p data-rise="1" style="font-size:20px;line-height:1.6;max-width:38ch;color:color-mix(in srgb, var(--color-text) 76%, transparent);margin:0 0 36px;animation-delay:0.16s">Tile and hardwood floors, showers, backsplashes, countertops, fireplaces and stairs — for Albuquerque homeowners, builders and property managers. Installing since 2013.</p>
+        <h1 data-hero-h1="1" data-rise="1" style="font-size:82px;line-height:1.0;letter-spacing:0;margin:0 0 26px;max-width:13ch;animation-delay:0.08s">{{ tr.heroH1 }}</h1>
+        <p data-rise="1" style="font-size:20px;line-height:1.6;max-width:38ch;color:color-mix(in srgb, var(--color-text) 76%, transparent);margin:0 0 36px;animation-delay:0.16s">{{ tr.heroP }}</p>
         <div data-rise="1" style="display:flex;flex-wrap:wrap;gap:12px;animation-delay:0.24s">
-          <a href="{{ telHref }}" style="color:var(--color-accent-700);text-decoration:none;border-bottom:1px solid var(--color-accent-700);padding-bottom:2px;font-weight:700;font-size:17px">Call for a free estimate →</a>
-          <a href="#" onClick="{{ goWork }}" style="color:var(--color-text);text-decoration:none;border-bottom:1px solid var(--color-divider);padding-bottom:2px;font-size:17px;font-weight:700">See the work →</a>
+          <a href="{{ telHref }}" style="color:var(--color-accent-700);text-decoration:none;border-bottom:1px solid var(--color-accent-700);padding-bottom:2px;font-weight:700;font-size:17px">{{ tr.heroCall }}</a>
+          <a href="#" onClick="{{ goWork }}" style="color:var(--color-text);text-decoration:none;border-bottom:1px solid var(--color-divider);padding-bottom:2px;font-size:17px;font-weight:700">{{ tr.heroSee }}</a>
           </div>
       </div>
       <div data-rise="1" data-heroimg="1" style="position:relative;z-index:1;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300);box-shadow:var(--shadow-lg);outline:1px solid var(--color-divider);outline-offset:-1px;animation-delay:0.12s">
@@ -221,10 +222,10 @@
     <section style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,32px) 96px">
       <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:32px">
         <div>
-          <h2 style="font-size:40px;line-height:1.08;margin:0 0 12px">Completed work</h2>
-          <p style="font-size:17px;color:color-mix(in srgb, var(--color-text) 72%, transparent);margin:0">Tile and hardwood — floors, showers, backsplashes, countertops, fireplaces and stairs.</p>
+          <h2 style="font-size:40px;line-height:1.08;margin:0 0 12px">{{ tr.cwH2 }}</h2>
+          <p style="font-size:17px;color:color-mix(in srgb, var(--color-text) 72%, transparent);margin:0">{{ tr.cwP }}</p>
         </div>
-        <a href="#" onClick="{{ goWork }}" style="color:var(--color-accent-700);text-decoration:none;border-bottom:1px solid var(--color-accent-700);padding-bottom:2px;font-weight:700;font-size:16px;flex:none">All photos →</a>
+        <a href="#" onClick="{{ goWork }}" style="color:var(--color-accent-700);text-decoration:none;border-bottom:1px solid var(--color-accent-700);padding-bottom:2px;font-weight:700;font-size:16px;flex:none">{{ tr.cwAll }}</a>
       </div>
       <div onMouseEnter="{{ pause }}" onMouseLeave="{{ resume }}" data-stage="1" style="position:relative;aspect-ratio:16/9;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300);border:1px solid var(--color-divider);box-shadow:var(--shadow-lg)">
         <sc-for list="{{ slides }}" as="p" hint-placeholder-count="8">
@@ -235,7 +236,7 @@
         <div style="position:absolute;inset:auto 0 0 0;z-index:3;height:42%;background:linear-gradient(to top, rgba(6,14,26,0.9), transparent);pointer-events:none"></div>
         <div style="position:absolute;left:clamp(20px,3vw,40px);bottom:clamp(20px,3vw,36px);z-index:4;display:flex;align-items:flex-end;gap:22px">
           <span style="font-family:var(--font-heading);font-size:clamp(28px,3.4vw,46px);line-height:0.9;color:var(--color-neutral-100)">{{ slideLabel }}</span>
-          <a href="#" onClick="{{ slideOpen }}" data-fullsize="1" style="font-size:13px;letter-spacing:0.22em;text-transform:uppercase;font-weight:700;text-decoration:none;padding-bottom:6px">View full size</a>
+          <a href="#" onClick="{{ slideOpen }}" data-fullsize="1" style="font-size:13px;letter-spacing:0.22em;text-transform:uppercase;font-weight:700;text-decoration:none;padding-bottom:6px">{{ tr.viewFull }}</a>
         </div>
         <div style="position:absolute;right:clamp(20px,3vw,40px);bottom:clamp(20px,3vw,36px);z-index:4;display:flex;align-items:center;gap:10px">
           <span style="font-size:13px;letter-spacing:0.16em;color:var(--color-neutral-200);margin-right:8px">{{ slideCount }}</span>
@@ -255,21 +256,21 @@
     <section style="background:var(--color-surface);border-radius:var(--radius-lg);border:1px solid var(--color-divider);max-width:1240px;margin:0 auto 88px;padding:clamp(36px,5vw,72px) clamp(24px,4vw,64px)">
       <div data-two="1" style="display:grid;grid-template-columns:0.8fr 1.2fr;gap:clamp(28px,4vw,56px)">
         <div>
-          <h2 style="font-size:40px;line-height:1.08;margin:0 0 18px">Specialty installs</h2>
-          <p style="font-size:17px;color:color-mix(in srgb, var(--color-text) 72%, transparent);margin:0">The work we are called in for by name — plus everyday floors. Residential and commercial, new construction and remodels.</p>
+          <h2 style="font-size:40px;line-height:1.08;margin:0 0 18px">{{ tr.spH2 }}</h2>
+          <p style="font-size:17px;color:color-mix(in srgb, var(--color-text) 72%, transparent);margin:0">{{ tr.spP }}</p>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px 24px;align-content:start">
-          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">Tile floors</div>
-          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">Showers &amp; tub surrounds</div>
-          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">Backsplashes</div>
-          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">Patios &amp; entries</div>
-          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">Commercial floors</div>
-          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">Repairs &amp; re-grout</div>
-          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">Fireplace surrounds</div>
-          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">Hardwood floors</div>
-          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">Countertops</div>
-          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">Stairs, treads &amp; risers</div>
-          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">Waterproofing &amp; prep</div>
+          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">{{ tr.svcTileFloors }}</div>
+          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">{{ tr.svcShowers }}</div>
+          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">{{ tr.svcBacksplash }}</div>
+          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">{{ tr.svcPatios }}</div>
+          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">{{ tr.svcCommercial }}</div>
+          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">{{ tr.svcRepairs }}</div>
+          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">{{ tr.svcFireplace }}</div>
+          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">{{ tr.svcHardwood }}</div>
+          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">{{ tr.svcCountertops }}</div>
+          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">{{ tr.svcStairs }}</div>
+          <div style="font-size:17px;padding:12px 0;border-top:1px solid var(--color-divider)">{{ tr.svcWaterproof }}</div>
         </div>
       </div>
     </section>
@@ -278,19 +279,19 @@
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:1px;background:var(--color-divider);border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--color-divider)">
         <div style="background:var(--color-surface);padding:26px 24px">
           <div style="font-family:var(--font-heading);font-size:30px;line-height:1.05;margin-bottom:6px">2013</div>
-          <div style="font-size:14px;color:color-mix(in srgb, var(--color-text) 62%, transparent)">Installing since</div>
+          <div style="font-size:14px;color:color-mix(in srgb, var(--color-text) 62%, transparent)">{{ tr.stat1Sub }}</div>
         </div>
         <div style="background:var(--color-surface);padding:26px 24px">
-          <div style="font-family:var(--font-heading);font-size:30px;line-height:1.05;margin-bottom:6px">Insured</div>
-          <div style="font-size:14px;color:color-mix(in srgb, var(--color-text) 62%, transparent)">documentation available</div>
+          <div style="font-family:var(--font-heading);font-size:30px;line-height:1.05;margin-bottom:6px">{{ tr.stat2Big }}</div>
+          <div style="font-size:14px;color:color-mix(in srgb, var(--color-text) 62%, transparent)">{{ tr.stat2Sub }}</div>
         </div>
         <div style="background:var(--color-surface);padding:26px 24px">
-          <div style="font-family:var(--font-heading);font-size:30px;line-height:1.05;margin-bottom:6px">Free</div>
-          <div style="font-size:14px;color:color-mix(in srgb, var(--color-text) 62%, transparent)">written estimates</div>
+          <div style="font-family:var(--font-heading);font-size:30px;line-height:1.05;margin-bottom:6px">{{ tr.stat3Big }}</div>
+          <div style="font-size:14px;color:color-mix(in srgb, var(--color-text) 62%, transparent)">{{ tr.stat3Sub }}</div>
         </div>
         <div style="background:var(--color-surface);padding:26px 24px">
           <div style="font-family:var(--font-heading);font-size:30px;line-height:1.05;margin-bottom:6px">Español</div>
-          <div style="font-size:14px;color:color-mix(in srgb, var(--color-text) 62%, transparent)">and English</div>
+          <div style="font-size:14px;color:color-mix(in srgb, var(--color-text) 62%, transparent)">{{ tr.stat4Sub }}</div>
         </div>
       </div>
     </section>
@@ -298,11 +299,11 @@
     <section style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,32px) 112px">
       <div data-two="1" style="background:var(--band);color:var(--color-neutral-100);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,0.16);box-shadow:var(--shadow-lg);padding:clamp(36px,5vw,72px) clamp(24px,4vw,64px);display:grid;grid-template-columns:1fr auto;gap:clamp(28px,4vw,48px);align-items:center">
         <div>
-          <h2 style="font-size:44px;line-height:1.06;margin:0 0 16px;color:var(--color-neutral-100)">Get a free estimate</h2>
-          <p style="font-size:19px;margin:0;color:color-mix(in srgb, #f9f4ed 80%, transparent);max-width:46ch">Call or text and we'll come look at the space. No charge, no obligation.</p>
+          <h2 style="font-size:44px;line-height:1.06;margin:0 0 16px;color:var(--color-neutral-100)">{{ tr.ctaH2 }}</h2>
+          <p style="font-size:19px;margin:0;color:color-mix(in srgb, #f9f4ed 80%, transparent);max-width:46ch">{{ tr.ctaP }}</p>
         </div>
         <div style="display:flex;flex-direction:column;gap:12px">
-          <a href="#" onClick="{{ goContact }}" style="color:var(--color-neutral-100);text-decoration:none;border-bottom:1px solid var(--color-neutral-100);padding-bottom:2px;font-size:19px;font-weight:700;white-space:nowrap">Contact us</a>
+          <a href="#" onClick="{{ goContact }}" style="color:var(--color-neutral-100);text-decoration:none;border-bottom:1px solid var(--color-neutral-100);padding-bottom:2px;font-size:19px;font-weight:700;white-space:nowrap">{{ tr.ctaContact }}</a>
         </div>
       </div>
     </section>
@@ -312,11 +313,11 @@
   <sc-if value="{{ isWork }}" hint-placeholder-val="{{ false }}">
   <main>
     <section style="max-width:1240px;margin:0 auto;padding:clamp(48px,6vw,80px) clamp(20px,4vw,32px) 40px">
-      <h1 data-page-h1="1" style="font-size:58px;line-height:1.04;margin:0 0 20px;max-width:16ch">Work</h1>
-      <p style="font-size:20px;max-width:48ch;color:color-mix(in srgb, var(--color-text) 76%, transparent);margin:0 0 28px">Finished installations and close-up detail. Albuquerque and the surrounding area.</p>
+      <h1 data-page-h1="1" style="font-size:58px;line-height:1.04;margin:0 0 20px;max-width:16ch">{{ tr.workH1 }}</h1>
+      <p style="font-size:20px;max-width:48ch;color:color-mix(in srgb, var(--color-text) 76%, transparent);margin:0 0 28px">{{ tr.workP }}</p>
       <div data-viewtabs="1" style="display:flex;flex-wrap:wrap;gap:16px 36px;border-bottom:1px solid var(--color-divider);margin-bottom:28px">
-        <button onClick="{{ setViewSubstance }}" style="border:0;background:none;cursor:pointer;padding:0 0 14px;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;color:{{ substanceFg }};border-bottom:2px solid {{ substanceBorder }};margin-bottom:-1px">Tile &amp; wood</button>
-        <button onClick="{{ setViewRoom }}" style="border:0;background:none;cursor:pointer;padding:0 0 14px;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;color:{{ roomFg }};border-bottom:2px solid {{ roomBorder }};margin-bottom:-1px">Flooring, kitchen &amp; bath, exterior</button>
+        <button onClick="{{ setViewSubstance }}" style="border:0;background:none;cursor:pointer;padding:0 0 14px;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;color:{{ substanceFg }};border-bottom:2px solid {{ substanceBorder }};margin-bottom:-1px">{{ tr.tabSubstance }}</button>
+        <button onClick="{{ setViewRoom }}" style="border:0;background:none;cursor:pointer;padding:0 0 14px;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;color:{{ roomFg }};border-bottom:2px solid {{ roomBorder }};margin-bottom:-1px">{{ tr.tabRoom }}</button>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:10px">
         <sc-for list="{{ activeTags }}" as="t" hint-placeholder-count="5">
@@ -331,7 +332,7 @@
           <span style="font-size:20px;color:var(--color-accent-700);transform:rotate({{ s.chevron }}deg);transition:transform 0.2s ease;display:inline-block;width:1em">›</span>
           <h2 style="font-size:38px;line-height:1.06;margin:0">{{ s.name }}</h2>
           <p style="font-size:16px;color:color-mix(in srgb, var(--color-text) 66%, transparent);margin:0">{{ s.blurb }}</p>
-          <span style="font-size:14px;color:color-mix(in srgb, var(--color-text) 55%, transparent);margin-left:auto">{{ s.count }} photos</span>
+          <span style="font-size:14px;color:color-mix(in srgb, var(--color-text) 55%, transparent);margin-left:auto">{{ s.count }} {{ tr.photosWord }}</span>
         </div>
         <div style="position:relative">
           <div data-gal="1" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));grid-auto-rows:196px;grid-auto-flow:dense;gap:16px">
@@ -351,8 +352,8 @@
 
     <section style="max-width:1240px;margin:0 auto;padding:88px clamp(20px,4vw,32px) 112px">
       <div style="background:var(--color-surface);border-radius:var(--radius-lg);border:1px solid var(--color-divider);padding:clamp(32px,4vw,56px) clamp(24px,4vw,64px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px">
-        <h2 style="font-size:34px;line-height:1.08;margin:0;max-width:26ch">Something here close to what you have in mind?</h2>
-        <a href="#" onClick="{{ goContact }}" style="color:var(--color-accent-700);text-decoration:none;border-bottom:1px solid var(--color-accent-700);padding-bottom:2px;font-weight:700;font-size:17px;white-space:nowrap">Get an estimate →</a>
+        <h2 style="font-size:34px;line-height:1.08;margin:0;max-width:26ch">{{ tr.workCtaH2 }}</h2>
+        <a href="#" onClick="{{ goContact }}" style="color:var(--color-accent-700);text-decoration:none;border-bottom:1px solid var(--color-accent-700);padding-bottom:2px;font-weight:700;font-size:17px;white-space:nowrap">{{ tr.workCtaLink }}</a>
       </div>
     </section>
   </main>
@@ -362,10 +363,10 @@
   <main>
     <section style="max-width:1240px;margin:0 auto;padding:clamp(48px,6vw,80px) clamp(20px,4vw,32px) 72px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(36px,5vw,64px);align-items:start" data-two="1">
       <div>
-        <h1 data-page-h1="1" style="font-size:58px;line-height:1.04;margin:0 0 26px;max-width:14ch">About Ruiz Flooring</h1>
-        <p data-dropcap="1" style="font-size:20px;line-height:1.6;margin:0 0 22px">We install tile in Albuquerque homes and businesses, and have since 2013.</p>
-        <p style="font-size:18px;line-height:1.6;color:color-mix(in srgb, var(--color-text) 78%, transparent);margin:0 0 18px">Most of our work is floors, showers and backsplashes for homeowners in the middle of a remodel, plus floors and entries for general contractors and property managers. We handle the whole tile scope: tear-out, substrate prep and waterproofing, layout, setting, grout and clean-up.</p>
-        <p style="font-size:18px;line-height:1.6;color:color-mix(in srgb, var(--color-text) 78%, transparent);margin:0">Insured. Estimates are free and in writing. We speak English and Spanish.</p>
+        <h1 data-page-h1="1" style="font-size:58px;line-height:1.04;margin:0 0 26px;max-width:14ch">{{ tr.aboutH1 }}</h1>
+        <p data-dropcap="1" style="font-size:20px;line-height:1.6;margin:0 0 22px">{{ tr.aboutLead }}</p>
+        <p style="font-size:18px;line-height:1.6;color:color-mix(in srgb, var(--color-text) 78%, transparent);margin:0 0 18px">{{ tr.aboutP2 }}</p>
+        <p style="font-size:18px;line-height:1.6;color:color-mix(in srgb, var(--color-text) 78%, transparent);margin:0">{{ tr.aboutP3 }}</p>
       </div>
       <div style="position:relative;aspect-ratio:3/4;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-neutral-300);box-shadow:var(--shadow-md)">
         <img src="photos/featured/about.webp" alt="" onError="{{ hideBroken }}" decoding="async" class="washed" style="width:100%;height:100%;object-fit:cover">
@@ -374,35 +375,35 @@
     </section>
 
     <section style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,32px) 96px">
-      <h2 style="font-size:38px;line-height:1.08;margin:0 0 40px">Process</h2>
+      <h2 style="font-size:38px;line-height:1.08;margin:0 0 40px">{{ tr.processH2 }}</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:32px">
         <div>
           <div style="width:56px;height:56px;border-radius:999px;background:var(--color-accent-200);color:var(--color-accent-800);display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:24px;margin-bottom:18px">1</div>
-          <h3 style="font-size:22px;margin:0 0 10px">Walk-through</h3>
-          <p style="font-size:16px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 72%, transparent);margin:0">We look at the space, measure, and talk through layout, material and schedule.</p>
+          <h3 style="font-size:22px;margin:0 0 10px">{{ tr.step1H3 }}</h3>
+          <p style="font-size:16px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 72%, transparent);margin:0">{{ tr.step1P }}</p>
         </div>
         <div>
           <div style="width:56px;height:56px;border-radius:999px;background:var(--color-accent-200);color:var(--color-accent-800);display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:24px;margin-bottom:18px">2</div>
-          <h3 style="font-size:22px;margin:0 0 10px">Written estimate</h3>
-          <p style="font-size:16px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 72%, transparent);margin:0">Line-item pricing for labor and materials, at no cost. No pressure to book.</p>
+          <h3 style="font-size:22px;margin:0 0 10px">{{ tr.step2H3 }}</h3>
+          <p style="font-size:16px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 72%, transparent);margin:0">{{ tr.step2P }}</p>
         </div>
         <div>
           <div style="width:56px;height:56px;border-radius:999px;background:var(--color-accent-200);color:var(--color-accent-800);display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:24px;margin-bottom:18px">3</div>
-          <h3 style="font-size:22px;margin:0 0 10px">Prep</h3>
-          <p style="font-size:16px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 72%, transparent);margin:0">Tear-out, leveling, backer board and waterproofing before a single tile goes down.</p>
+          <h3 style="font-size:22px;margin:0 0 10px">{{ tr.step3H3 }}</h3>
+          <p style="font-size:16px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 72%, transparent);margin:0">{{ tr.step3P }}</p>
         </div>
         <div>
           <div style="width:56px;height:56px;border-radius:999px;background:var(--color-accent-200);color:var(--color-accent-800);display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:24px;margin-bottom:18px">4</div>
-          <h3 style="font-size:22px;margin:0 0 10px">Install</h3>
-          <p style="font-size:16px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 72%, transparent);margin:0">Set, grout, seal, caulk and clean up. We walk the finished job with you.</p>
+          <h3 style="font-size:22px;margin:0 0 10px">{{ tr.step4H3 }}</h3>
+          <p style="font-size:16px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 72%, transparent);margin:0">{{ tr.step4P }}</p>
         </div>
       </div>
     </section>
 
     <section style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,32px) 112px">
       <div style="background:var(--color-accent-2-200);border-radius:var(--radius-lg);border:1px solid var(--color-divider);padding:clamp(32px,4vw,56px) clamp(24px,4vw,64px)">
-        <h2 style="font-size:32px;line-height:1.08;margin:0 0 20px">Where we work</h2>
-        <p style="font-size:18px;max-width:60ch;color:var(--color-accent-2-900);margin:0">Albuquerque and the surrounding area — Rio Rancho, Corrales, Bernalillo, Los Lunas, Belen, Placitas and the East Mountains. Ask about anything further out.</p>
+        <h2 style="font-size:32px;line-height:1.08;margin:0 0 20px">{{ tr.whereH2 }}</h2>
+        <p style="font-size:18px;max-width:60ch;color:var(--color-accent-2-900);margin:0">{{ tr.whereP }}</p>
       </div>
     </section>
   </main>
@@ -412,43 +413,43 @@
   <main>
     <section style="max-width:1240px;margin:0 auto;padding:clamp(48px,6vw,80px) clamp(20px,4vw,32px) 112px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,72px);align-items:start" data-two="1">
       <div>
-        <h1 data-page-h1="1" style="font-size:58px;line-height:1.04;margin:0 0 22px;max-width:14ch">Contact</h1>
-        <p style="font-size:20px;line-height:1.55;max-width:42ch;color:color-mix(in srgb, var(--color-text) 78%, transparent);margin:0 0 44px">Call or text for a free estimate. Albuquerque and the surrounding area.</p>
+        <h1 data-page-h1="1" style="font-size:58px;line-height:1.04;margin:0 0 22px;max-width:14ch">{{ tr.contactH1 }}</h1>
+        <p style="font-size:20px;line-height:1.55;max-width:42ch;color:color-mix(in srgb, var(--color-text) 78%, transparent);margin:0 0 44px">{{ tr.contactP }}</p>
 
         <div style="display:flex;flex-direction:column;gap:28px">
           <div>
-            <div style="font-size:13px;letter-spacing:0.09em;text-transform:uppercase;color:color-mix(in srgb, var(--color-text) 55%, transparent);margin-bottom:8px">Phone</div>
+            <div style="font-size:13px;letter-spacing:0.09em;text-transform:uppercase;color:color-mix(in srgb, var(--color-text) 55%, transparent);margin-bottom:8px">{{ tr.lblPhone }}</div>
             <a href="{{ telHref }}" style="font-family:var(--font-body);font-weight:700;font-size:clamp(30px,5vw,40px);line-height:1.05;letter-spacing:-0.01em;text-decoration:none;color:var(--color-accent-700);white-space:nowrap">{{ phone }}</a>
           </div>
           <div>
-            <div style="font-size:13px;letter-spacing:0.09em;text-transform:uppercase;color:color-mix(in srgb, var(--color-text) 55%, transparent);margin-bottom:8px">Email</div>
+            <div style="font-size:13px;letter-spacing:0.09em;text-transform:uppercase;color:color-mix(in srgb, var(--color-text) 55%, transparent);margin-bottom:8px">{{ tr.lblEmail }}</div>
             <a href="{{ mailHref }}" style="font-family:var(--font-body);font-weight:700;font-size:26px;line-height:1.2;text-decoration:none;color:var(--color-accent-700);word-break:break-all">{{ email }}</a>
           </div>
           <div>
-            <div style="font-size:13px;letter-spacing:0.09em;text-transform:uppercase;color:color-mix(in srgb, var(--color-text) 55%, transparent);margin-bottom:8px">Hours</div>
-            <div style="font-size:19px">Monday–Friday, 7am–5pm. Saturday by appointment.</div>
+            <div style="font-size:13px;letter-spacing:0.09em;text-transform:uppercase;color:color-mix(in srgb, var(--color-text) 55%, transparent);margin-bottom:8px">{{ tr.lblHours }}</div>
+            <div style="font-size:19px">{{ tr.hoursVal }}</div>
           </div>
         </div>
       </div>
 
       <div style="background:var(--color-surface);border-radius:var(--radius-lg);border:1px solid var(--color-divider);padding:clamp(30px,4vw,48px) clamp(24px,4vw,44px)">
-        <h2 style="font-size:28px;line-height:1.1;margin:0 0 24px">Good to know</h2>
+        <h2 style="font-size:28px;line-height:1.1;margin:0 0 24px">{{ tr.goodToKnow }}</h2>
         <div style="display:flex;flex-direction:column;gap:20px">
           <div style="padding-bottom:20px;border-bottom:1px solid var(--color-divider)">
-            <div style="font-size:17px;font-weight:700;margin-bottom:5px">Free written estimates</div>
-            <div style="font-size:16px;color:color-mix(in srgb, var(--color-text) 72%, transparent)">Labor and materials broken out, no charge for the visit.</div>
+            <div style="font-size:17px;font-weight:700;margin-bottom:5px">{{ tr.gtk1H }}</div>
+            <div style="font-size:16px;color:color-mix(in srgb, var(--color-text) 72%, transparent)">{{ tr.gtk1P }}</div>
           </div>
           <div style="padding-bottom:20px;border-bottom:1px solid var(--color-divider)">
-            <div style="font-size:17px;font-weight:700;margin-bottom:5px">Insured</div>
-            <div style="font-size:16px;color:color-mix(in srgb, var(--color-text) 72%, transparent)">Documentation available on request for GCs and property managers.</div>
+            <div style="font-size:17px;font-weight:700;margin-bottom:5px">{{ tr.gtk2H }}</div>
+            <div style="font-size:16px;color:color-mix(in srgb, var(--color-text) 72%, transparent)">{{ tr.gtk2P }}</div>
           </div>
           <div style="padding-bottom:20px;border-bottom:1px solid var(--color-divider)">
-            <div style="font-size:17px;font-weight:700;margin-bottom:5px">English and Español</div>
-            <div style="font-size:16px;color:color-mix(in srgb, var(--color-text) 72%, transparent)">Hablamos español — llámenos con confianza.</div>
+            <div style="font-size:17px;font-weight:700;margin-bottom:5px">{{ tr.gtk3H }}</div>
+            <div style="font-size:16px;color:color-mix(in srgb, var(--color-text) 72%, transparent)">{{ tr.gtk3P }}</div>
           </div>
           <div>
-            <div style="font-size:17px;font-weight:700;margin-bottom:5px">Service area</div>
-            <div style="font-size:16px;color:color-mix(in srgb, var(--color-text) 72%, transparent)">Albuquerque, Rio Rancho, Corrales, Los Lunas and the East Mountains.</div>
+            <div style="font-size:17px;font-weight:700;margin-bottom:5px">{{ tr.gtk4H }}</div>
+            <div style="font-size:16px;color:color-mix(in srgb, var(--color-text) 72%, transparent)">{{ tr.gtk4P }}</div>
           </div>
         </div>
       </div>
@@ -467,7 +468,7 @@
   </sc-if>
 
   <div data-callbar="1" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:40;gap:10px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:color-mix(in srgb, var(--color-bg) 94%, transparent);backdrop-filter:blur(12px);border-top:1px solid var(--color-divider)">
-    <a href="{{ telHref }}" style="flex:1 1 0;text-align:center;white-space:nowrap;color:var(--color-accent-700);text-decoration:none;font-weight:700;font-size:16px;padding:15px 0;border-top:1px solid var(--color-divider)">Call {{ phone }}</a>
+    <a href="{{ telHref }}" style="flex:1 1 0;text-align:center;white-space:nowrap;color:var(--color-accent-700);text-decoration:none;font-weight:700;font-size:16px;padding:15px 0;border-top:1px solid var(--color-divider)">{{ tr.callWord }} {{ phone }}</a>
     <a href="{{ mailHref }}" aria-label="Email us" style="flex:none;color:var(--color-text);text-decoration:none;font-size:18px;padding:15px 0;line-height:1;border-top:1px solid var(--color-divider)">✉</a>
   </div>
 
@@ -481,11 +482,11 @@
             <span style="font-size:11px;letter-spacing:0.42em;font-weight:700;text-transform:uppercase;color:var(--color-accent-700)">Flooring</span>
           </span>
         </div>
-        <div style="font-size:15px;color:color-mix(in srgb, var(--color-text) 65%, transparent)">Tile installation in Albuquerque, NM. Insured.</div>
+        <div style="font-size:15px;color:color-mix(in srgb, var(--color-text) 65%, transparent)">{{ tr.footerTagline }}</div>
       </div>
       <div style="display:flex;align-items:center;gap:26px;font-size:15px">
         <a href="{{ telHref }}" style="text-decoration:none;white-space:nowrap">{{ phone }}</a>
-        <a href="#" onClick="{{ goContact }}" style="text-decoration:none;white-space:nowrap">Contact</a>
+        <a href="#" onClick="{{ goContact }}" style="text-decoration:none;white-space:nowrap">{{ tr.navContact }}</a>
       </div>
     </div>
   </footer>
@@ -493,14 +494,14 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#c8102e&quot;,&quot;options&quot;:[&quot;#c8102e&quot;,&quot;#b06a1f&quot;,&quot;#1f6f5c&quot;,&quot;#3a4a63&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Look&quot;},&quot;galleryRhythm&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;editorial&quot;,&quot;options&quot;:[&quot;uniform&quot;,&quot;mixed&quot;,&quot;editorial&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Look&quot;},&quot;photoTone&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;natural&quot;,&quot;options&quot;:[&quot;natural&quot;,&quot;editorial&quot;,&quot;archival&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Look&quot;},&quot;slideSeconds&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:5,&quot;min&quot;:2,&quot;max&quot;:12,&quot;step&quot;:0.5,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Look&quot;},&quot;phone&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;(505) 319-7653&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Eleazar7653@gmail.com&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;photosPerSection&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:65,&quot;min&quot;:0,&quot;max&quot;:60,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Gallery&quot;},&quot;showFilenames&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Gallery&quot;}}">
 const SECTIONS = [
-  { id: "plank", name: "Wood-look plank", dir: "plank", n: 21, skip: [16], blurb: "Long-format plank tile and luxury vinyl plank, set with leveling clips." },
+  { id: "plank", name: "Wood", dir: "plank", n: 21, skip: [16], blurb: "Wood-look tile and luxury vinyl flooring, set with leveling clips." },
   { id: "hardwood", name: "Hardwood", dir: "hardwood", n: 24, skip: [6, 7], blurb: "Solid and engineered wood — acacia, white oak, stair landings and thresholds." },
   { id: "showers", name: "Showers & tubs", dir: "showers", n: 62, skip: [7, 19], blurb: "Waterproofed pans and walls, benches, niches and tub surrounds." },
   { id: "porcelain", name: "Porcelain floors", dir: "porcelain", n: 19, skip: [1], blurb: "Large-format porcelain for new construction, baths and laundry rooms." },
   { id: "kitchens", name: "Kitchens & baths", dir: "kitchens", n: 22, blurb: "Backsplashes, vanity tops and countertops — herringbone, hex and picket." },
   { id: "patios", name: "Patios & entries", dir: "patios", n: 8, skip: [3, 4, 7], blurb: "Covered patios, paver walkways and outdoor living floors." },
   { id: "fireplaces", name: "Fireplaces", dir: "fireplaces", n: 10, skip: [2, 3, 4], blurb: "Surrounds and full-height hearth walls in tile, stone and split-face travertine." },
-  { id: "stairs", name: "Stairs", dir: "stairs", n: 2, blurb: "Treads, risers and landings in wood-look plank and hardwood." }
+  { id: "stairs", name: "Stairs", dir: "stairs", n: 2, blurb: "Treads, risers and landings in wood and hardwood." }
 ];
 
 const BY_DIR = {};
@@ -510,10 +511,10 @@ SECTIONS.forEach(s => { BY_DIR[s.dir] = s; });
 // and room — built by combining whole folders, not per-photo tags.
 const SUBSTANCE_GROUPS = [
   { id: "tile", name: "Tile", dirs: ["porcelain", "showers", "kitchens", "patios", "fireplaces"], blurb: "Porcelain, marble and natural stone — floors, walls and surrounds." },
-  { id: "wood", name: "Wood, hardwood & wood-look", dirs: ["hardwood", "plank", "stairs"], blurb: "Solid hardwood, engineered wood and wood-look plank tile." }
+  { id: "wood", name: "Wood & hardwood", dirs: ["hardwood", "plank", "stairs"], blurb: "Solid hardwood, engineered wood and wood-look tile." }
 ];
 const ROOM_GROUPS = [
-  { id: "floors", name: "Flooring", dirs: ["plank", "hardwood", "porcelain", "stairs"], blurb: "Everyday floors — tile, hardwood and wood-look plank." },
+  { id: "floors", name: "Flooring", dirs: ["plank", "hardwood", "porcelain", "stairs"], blurb: "Everyday floors — tile, hardwood and wood." },
   { id: "kitchen-bath", name: "Kitchen & bath", dirs: ["kitchens", "showers"], blurb: "Backsplashes, countertops, showers and tub surrounds." },
   { id: "exterior", name: "Exterior", dirs: ["patios"], blurb: "Covered patios, paver walkways and outdoor living floors." }
 ];
@@ -541,8 +542,119 @@ const TONES = {
   archival: { dark: "saturate(0.42) contrast(1.08) brightness(0.86) sepia(0.12)", light: "saturate(0.5) contrast(1.05) brightness(1.01) sepia(0.1)" }
 };
 
+const STRINGS = {
+  en: {
+    navHome: "Home", navWork: "Work", navAbout: "About", navContact: "Contact",
+    heroEyebrow: "Albuquerque, New Mexico",
+    heroH1: "Tile, set right the first time.",
+    heroP: "Tile and hardwood floors, showers, backsplashes, countertops, fireplaces and stairs — for Albuquerque homeowners, builders and property managers. Installing since 2013.",
+    heroCall: "Call for a free estimate →", heroSee: "See the work →",
+    cwH2: "Completed work",
+    cwP: "Tile and hardwood — floors, showers, backsplashes, countertops, fireplaces and stairs.",
+    cwAll: "All photos →", viewFull: "View full size",
+    spH2: "Specialty installs",
+    spP: "The work we are called in for by name — plus everyday floors. Residential and commercial, new construction and remodels.",
+    svcTileFloors: "Tile floors", svcShowers: "Showers & tub surrounds", svcBacksplash: "Backsplashes",
+    svcPatios: "Patios & entries", svcCommercial: "Commercial floors", svcRepairs: "Repairs & re-grout",
+    svcFireplace: "Fireplace surrounds", svcHardwood: "Hardwood floors", svcCountertops: "Countertops",
+    svcStairs: "Stairs, treads & risers", svcWaterproof: "Waterproofing & prep",
+    stat1Sub: "Installing since", stat2Big: "Insured", stat2Sub: "documentation available",
+    stat3Big: "Free", stat3Sub: "written estimates", stat4Sub: "and English",
+    ctaH2: "Get a free estimate",
+    ctaP: "Call or text and we'll come look at the space. No charge, no obligation.",
+    ctaContact: "Contact us",
+    workH1: "Work",
+    workP: "Finished installations and close-up detail. Albuquerque and the surrounding area.",
+    tabSubstance: "Tile & wood", tabRoom: "Flooring, kitchen & bath, exterior",
+    photosWord: "photos", moreWord: "more",
+    workCtaH2: "Something here close to what you have in mind?", workCtaLink: "Get an estimate →",
+    aboutH1: "About Ruiz Flooring",
+    aboutLead: "We install tile in Albuquerque homes and businesses, and have since 2013.",
+    aboutP2: "Most of our work is floors, showers and backsplashes for homeowners in the middle of a remodel, plus floors and entries for general contractors and property managers. We handle the whole tile scope: tear-out, substrate prep and waterproofing, layout, setting, grout and clean-up.",
+    aboutP3: "Insured. Estimates are free and in writing. We speak English and Spanish.",
+    processH2: "Process",
+    step1H3: "Walk-through", step1P: "We look at the space, measure, and talk through layout, material and schedule.",
+    step2H3: "Written estimate", step2P: "Line-item pricing for labor and materials, at no cost. No pressure to book.",
+    step3H3: "Prep", step3P: "Tear-out, leveling, backer board and waterproofing before a single tile goes down.",
+    step4H3: "Install", step4P: "Set, grout, seal, caulk and clean up. We walk the finished job with you.",
+    whereH2: "Where we work",
+    whereP: "Albuquerque and the surrounding area — Rio Rancho, Corrales, Bernalillo, Los Lunas, Belen, Placitas and the East Mountains. Ask about anything further out.",
+    contactH1: "Contact",
+    contactP: "Call or text for a free estimate. Albuquerque and the surrounding area.",
+    lblPhone: "Phone", lblEmail: "Email", lblHours: "Hours",
+    hoursVal: "Monday–Friday, 7am–5pm. Saturday by appointment.",
+    goodToKnow: "Good to know",
+    gtk1H: "Free written estimates", gtk1P: "Labor and materials broken out, no charge for the visit.",
+    gtk2H: "Insured", gtk2P: "Documentation available on request for GCs and property managers.",
+    gtk3H: "English and Español", gtk3P: "Hablamos español — llámenos con confianza.",
+    gtk4H: "Service area", gtk4P: "Albuquerque, Rio Rancho, Corrales, Los Lunas and the East Mountains.",
+    callWord: "Call",
+    footerTagline: "Tile installation in Albuquerque, NM. Insured."
+  },
+  es: {
+    navHome: "Inicio", navWork: "Trabajos", navAbout: "Nosotros", navContact: "Contacto",
+    heroEyebrow: "Albuquerque, Nuevo México",
+    heroH1: "Azulejo, bien puesto desde la primera vez.",
+    heroP: "Pisos de azulejo y madera, regaderas, salpicaderos, cubiertas, chimeneas y escaleras — para propietarios, constructores y administradores de propiedades en Albuquerque. Instalando desde 2013.",
+    heroCall: "Llame para un presupuesto gratis →", heroSee: "Vea el trabajo →",
+    cwH2: "Trabajos terminados",
+    cwP: "Azulejo y madera — pisos, regaderas, salpicaderos, cubiertas, chimeneas y escaleras.",
+    cwAll: "Todas las fotos →", viewFull: "Ver tamaño completo",
+    spH2: "Instalaciones especializadas",
+    spP: "El trabajo por el que nos llaman por nombre — además de pisos de todos los días. Residencial y comercial, obra nueva y remodelaciones.",
+    svcTileFloors: "Pisos de azulejo", svcShowers: "Regaderas y contornos de tina", svcBacksplash: "Salpicaderos",
+    svcPatios: "Patios y entradas", svcCommercial: "Pisos comerciales", svcRepairs: "Reparaciones y rejunteo",
+    svcFireplace: "Contornos de chimenea", svcHardwood: "Pisos de madera", svcCountertops: "Cubiertas",
+    svcStairs: "Escaleras, huellas y contrahuellas", svcWaterproof: "Impermeabilización y preparación",
+    stat1Sub: "Instalando desde", stat2Big: "Asegurados", stat2Sub: "documentación disponible",
+    stat3Big: "Gratis", stat3Sub: "presupuestos por escrito", stat4Sub: "e inglés",
+    ctaH2: "Obtenga un presupuesto gratis",
+    ctaP: "Llame o mande mensaje y vamos a ver el espacio. Sin costo, sin compromiso.",
+    ctaContact: "Contáctenos",
+    workH1: "Trabajos",
+    workP: "Instalaciones terminadas y detalles de cerca. Albuquerque y sus alrededores.",
+    tabSubstance: "Azulejo y madera", tabRoom: "Pisos, cocina y baño, exterior",
+    photosWord: "fotos", moreWord: "más",
+    workCtaH2: "¿Hay algo aquí parecido a lo que tiene en mente?", workCtaLink: "Pida un presupuesto →",
+    aboutH1: "Sobre Ruiz Flooring",
+    aboutLead: "Instalamos azulejo en casas y negocios de Albuquerque desde 2013.",
+    aboutP2: "La mayor parte de nuestro trabajo son pisos, regaderas y salpicaderos para propietarios en plena remodelación, además de pisos y entradas para contratistas generales y administradores de propiedades. Nos encargamos de todo el proceso del azulejo: demolición, preparación de la base e impermeabilización, trazo, colocación, lechada y limpieza.",
+    aboutP3: "Asegurados. Los presupuestos son gratis y por escrito. Hablamos inglés y español.",
+    processH2: "Proceso",
+    step1H3: "Recorrido", step1P: "Vemos el espacio, medimos y platicamos el trazo, el material y el calendario.",
+    step2H3: "Presupuesto por escrito", step2P: "Precios detallados de mano de obra y materiales, sin costo. Sin presión para contratar.",
+    step3H3: "Preparación", step3P: "Demolición, nivelación, panel de respaldo e impermeabilización antes de colocar un solo azulejo.",
+    step4H3: "Instalación", step4P: "Colocamos, lechamos, sellamos, aplicamos silicón y limpiamos. Recorremos el trabajo terminado con usted.",
+    whereH2: "Dónde trabajamos",
+    whereP: "Albuquerque y sus alrededores — Rio Rancho, Corrales, Bernalillo, Los Lunas, Belén, Placitas y las East Mountains. Pregunte por lugares más lejanos.",
+    contactH1: "Contacto",
+    contactP: "Llame o mande mensaje para un presupuesto gratis. Albuquerque y sus alrededores.",
+    lblPhone: "Teléfono", lblEmail: "Correo", lblHours: "Horario",
+    hoursVal: "Lunes a viernes, 7am–5pm. Sábado con cita.",
+    goodToKnow: "Bueno saber",
+    gtk1H: "Presupuestos gratis por escrito", gtk1P: "Mano de obra y materiales detallados, sin costo por la visita.",
+    gtk2H: "Asegurados", gtk2P: "Documentación disponible a solicitud para contratistas y administradores.",
+    gtk3H: "Inglés y español", gtk3P: "Hablamos español — llámenos con confianza.",
+    gtk4H: "Área de servicio", gtk4P: "Albuquerque, Rio Rancho, Corrales, Los Lunas y las East Mountains.",
+    callWord: "Llamar",
+    footerTagline: "Instalación de azulejo en Albuquerque, NM. Asegurados.",
+    groups: {
+      tile: { name: "Azulejo", blurb: "Porcelana, mármol y piedra natural — pisos, paredes y contornos." },
+      wood: { name: "Madera", blurb: "Madera sólida, madera de ingeniería y azulejo tipo madera." },
+      floors: { name: "Pisos", blurb: "Pisos de todos los días — azulejo, madera y madera de ingeniería." },
+      "kitchen-bath": { name: "Cocina y baño", blurb: "Salpicaderos, cubiertas, regaderas y contornos de tina." },
+      exterior: { name: "Exterior", blurb: "Patios techados, andadores de adoquín y pisos para exteriores." }
+    },
+    sections: {
+      plank: { name: "Madera" }, hardwood: { name: "Madera dura" }, showers: { name: "Regaderas y tinas" },
+      porcelain: { name: "Pisos de porcelana" }, kitchens: { name: "Cocinas y baños" }, patios: { name: "Patios y entradas" },
+      fireplaces: { name: "Chimeneas" }, stairs: { name: "Escaleras" }
+    }
+  }
+};
+
 class Component extends DCLogic {
-  state = { page: "home", lb: null, slide: 0, paused: false, theme: "light", worksView: "substance", collapsed: {} };
+  state = { page: "home", lb: null, slide: 0, paused: false, theme: "light", lang: "en", worksView: "substance", collapsed: {} };
 
   toggleSection(id) {
     return () => this.setState(s => ({ collapsed: { ...s.collapsed, [id]: !s.collapsed[id] } }));
@@ -558,6 +670,9 @@ class Component extends DCLogic {
     let saved = null;
     try { saved = localStorage.getItem("ruiz-theme"); } catch (e) {}
     this.applyTheme(saved === "light" || saved === "dark" ? saved : "light");
+    let savedLang = null;
+    try { savedLang = localStorage.getItem("ruiz-lang"); } catch (e) {}
+    this.applyLang(savedLang === "es" ? "es" : "en");
     window.addEventListener("keydown", this._key);
     this.applySkin();
     this._timer = setInterval(() => {
@@ -591,6 +706,12 @@ class Component extends DCLogic {
     requestAnimationFrame(() => this.applySkin());
     this.setState({ theme });
     try { localStorage.setItem("ruiz-theme", theme); } catch (e) {}
+  }
+
+  applyLang(lang) {
+    document.documentElement.lang = lang;
+    this.setState({ lang });
+    try { localStorage.setItem("ruiz-lang", lang); } catch (e) {}
   }
 
   slideStep(d) {
@@ -658,6 +779,8 @@ class Component extends DCLogic {
   renderVals() {
     const phone = this.props.phone ?? "(505) 000-0000";
     const email = this.props.email ?? "hello@ruizflooring.com";
+    const lang = this.state.lang || "en";
+    const T = STRINGS[lang] || STRINGS.en;
     const all = [];
     const cap = this.props.photosPerSection ?? 0;
     const photosByDir = {};
@@ -669,17 +792,18 @@ class Component extends DCLogic {
       // collapsed on first load so the page doesn't open on a huge scroll.
       const open = g.id in this.state.collapsed ? !this.state.collapsed[g.id] : photos.length <= 20;
       const hasMore = photos.length > PREVIEW;
+      const gt = (T.groups && T.groups[g.id]) || {};
       return {
-        id: g.id, name: g.name, blurb: g.blurb, count: photos.length,
+        id: g.id, name: gt.name || g.name, blurb: gt.blurb || g.blurb, count: photos.length,
         visiblePhotos: open ? photos : photos.slice(0, PREVIEW),
         hasMore: hasMore && !open, chevron: open ? 90 : 0,
-        moreLabel: `+ ${photos.length - PREVIEW} more`,
+        moreLabel: `+ ${photos.length - PREVIEW} ${T.moreWord}`,
         toggle: this.toggleSection(g.id)
       };
     };
     const isSubstance = this.state.worksView === "substance";
     const activeGroups = (isSubstance ? SUBSTANCE_GROUPS : ROOM_GROUPS).map(buildGroup);
-    const activeTags = (isSubstance ? SUBSTANCE_GROUPS : ROOM_GROUPS).map(g => ({ href: "#" + g.id, name: g.name }));
+    const activeTags = (isSubstance ? SUBSTANCE_GROUPS : ROOM_GROUPS).map(g => ({ href: "#" + g.id, name: (T.groups && T.groups[g.id] && T.groups[g.id].name) || g.name }));
     // The home strip re-uses gallery entries so the lightbox sequence has no duplicates.
     const featured = SECTIONS.map(s => (photosByDir[s.dir] || [])[0]).filter(Boolean).slice(0, 7);
     featured.push((photosByDir[SECTIONS[0].dir] || [])[1]);
@@ -717,7 +841,7 @@ class Component extends DCLogic {
       substanceBorder: isSubstance ? "var(--color-accent)" : "transparent",
       roomFg: !isSubstance ? "var(--color-accent-700)" : "color-mix(in srgb, var(--color-text) 55%, transparent)",
       roomBorder: !isSubstance ? "var(--color-accent)" : "transparent",
-      slideLabel: featured[cursor] ? SECTIONS[cursor % SECTIONS.length].name : "",
+      slideLabel: featured[cursor] ? ((T.sections && T.sections[SECTIONS[cursor % SECTIONS.length].id] && T.sections[SECTIONS[cursor % SECTIONS.length].id].name) || SECTIONS[cursor % SECTIONS.length].name) : "",
       slideCount: (cursor + 1) + " / 8",
       slideNext: (e) => { if (e) e.preventDefault(); this.slideStep(1); },
       slidePrev: (e) => { if (e) e.preventDefault(); this.slideStep(-1); },
@@ -738,6 +862,9 @@ class Component extends DCLogic {
       hideBroken: (e) => { e.target.style.visibility = "hidden"; },
       themeIcon: this.state.theme === "light" ? "☾" : "☀",
       toggleTheme: (e) => { if (e) e.preventDefault(); this.applyTheme(this.state.theme === "light" ? "dark" : "light"); },
+      tr: T,
+      langLabel: lang === "en" ? "ES" : "EN",
+      toggleLang: (e) => { if (e) e.preventDefault(); this.applyLang(lang === "en" ? "es" : "en"); },
       heroPhotoLabel: this.props.showFilenames === false ? "" : "photos/featured/hero.webp",
       aboutPhotoLabel: this.props.showFilenames === false ? "" : "photos/featured/about.webp"
     };
